@@ -1,4 +1,5 @@
 import pytest
+
 from application.tolka import tolka
 
 
@@ -27,8 +28,6 @@ from application.tolka import tolka
 )
 def test_tolka(indata, forvantat):
     assert tolka(indata) == forvantat
-
-
 
 
 """
