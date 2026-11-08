@@ -1,4 +1,5 @@
 import pytest
+
 from application.stader import finns_stad
 
 
