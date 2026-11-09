@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> {{ stad }}</h1>
+<p>Temperatur nu: {{ temp | omvandling }}</p>
+<p>Vind nu: {{ vind }} </p>
+
+<table class=""table">
+<tr><th>Datum</th><th>Högsta</th><th>Lägsta</th><th>Nederbörd</th></tr>
+{% for x in dagar %}
+<tr>
+<td>{{ x.datum }} </td>
+<td>{{ x.max | omvandling }} </td>
+<td>{{ x.min | omvandling }} </td>
+<td>{{ x.nederbord }} </td>
+</tr>
+{% else %}
+<tr><td>Ingen data</td></tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}
