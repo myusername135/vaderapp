@@ -5,7 +5,12 @@
  <title>base.html</title>
 </head>
 <body class="container">
+ {% if request.endpoint != 'index' %}
+ <a href="{{ url_for('index') }}">← Tillbaka till startsidan</a>
+ {% endif %}
+
  {% block content %}{% endblock %}
+
+ <footer>Källa: Open-Meteo</footer>
 </body>
 </html>
-<footer>Källa: Open-Meteo</footer>
