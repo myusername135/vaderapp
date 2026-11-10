@@ -37,5 +37,10 @@ def omvandling(tal):
     return f"{omv_tal} °C"
 
 
+@app.errorhandler(404)
+def saknas(e):
+    return render_template("fel.html", fel="Sidan finns inte"), 404
+
+
 if __name__ == "__main__":
     app.run(debug=True)
